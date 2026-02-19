@@ -50,14 +50,14 @@ const seedData = async () => {
         price: 85000,
         description: "RTX Graphics, 16GB RAM",
         image: "https://imgs.search.brave.com/L1fQjzybRljj9vegy4k5SnKwFIW6B2VzqC3LJghaSoQ/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdGF0/aWMudmVjdGVlenku/Y29tL3N5c3RlbS9y/ZXNvdXJjZXMvdGh1/bWJuYWlscy8wNDgv/NjMwLzgyMi9zbWFs/bC9nYW1pbmctbGFw/dG9wLW1vY2t1cC1h/ZHZhbmNlZC10ZWNo/LWRlc2lnbi1mcmVl/LXBob3RvLmpwZw",
-        createdBy: users[1]._id,
+        createdBy: users[0]._id,
       },
       {
         title: "Wireless Headphones",
         price: 4000,
         description: "Noise Cancelling",
         image: "https://imgs.search.brave.com/8hsPFubE_dHqgrl_DyF1H3KYW_ziCf_anGGlV8khiXI/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdGF0/aWMudmVjdGVlenku/Y29tL3N5c3RlbS9y/ZXNvdXJjZXMvdGh1/bWJuYWlscy8wMzEv/MjAyLzI5MC9zbWFs/bC9tb2Rlcm4td2hp/dGUtc2xpbS13aXJl/bGVzcy1oZWFkcGhv/bmVzLXdpdGgtc2ls/dmVyLWRldGFpbHMt/cGhvdG8uanBn",
-        createdBy: users[1]._id,
+        createdBy: users[0]._id,
       },
       {
         title: "Smart Watch",
@@ -78,7 +78,7 @@ const seedData = async () => {
         price: 60000,
         description: "Professional photography camera",
         image: "https://imgs.search.brave.com/IK5zsDnfLt657Wi-LW-Yp1LkD_WzOAPH6VAVsxc1RF4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdGF0/aWMudmVjdGVlenku/Y29tL3N5c3RlbS9y/ZXNvdXJjZXMvdGh1/bWJuYWlscy8wNDgv/ODcyLzMxNi9zbWFs/bC9kc2xyLWNhbWVy/YS13aXRoLWdyZWVu/LWJhY2tncm91bmQt/cGhvdG8uanBn",
-        createdBy: users[1]._id,
+        createdBy: users[0]._id,
       },
       {
         title: "Office Chair",
