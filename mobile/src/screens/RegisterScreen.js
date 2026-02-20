@@ -3,31 +3,38 @@ import { View, TextInput, Button, Text, StyleSheet } from "react-native";
 import API from "../api/api";
 import { AuthContext } from "../context/AuthContext";
 
-export default function LoginScreen({ navigation }) {
+export default function RegisterScreen({ navigation }) {
+  const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const { setUser, setToken } = useContext(AuthContext);
 
-  const handleLogin = async () => {
-  try {
-    const { data } = await API.post("/auth/login", {
-      email,
-      password,
-    });
+  const handleRegister = async () => {
+    try {
+      const { data } = await API.post("/auth/register", {
+        name,
+        email,
+        password,
+      });
 
-    setUser(data.user);
-    setToken(data.token); // 👈 store token
+      setUser(data.user);
+      setToken(data.token);
 
-    navigation.replace("Home");
-  } catch (error) {
-    alert("Invalid credentials");
-  }
-};
-
+      navigation.replace("Home");
+    } catch (error) {
+      alert("Registration failed");
+    }
+  };
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Login</Text>
+      <Text style={styles.title}>Register</Text>
+
+      <TextInput
+        placeholder="Name"
+        style={styles.input}
+        onChangeText={setName}
+      />
 
       <TextInput
         placeholder="Email"
@@ -42,15 +49,15 @@ export default function LoginScreen({ navigation }) {
         onChangeText={setPassword}
       />
 
-      <Button title="Login" onPress={handleLogin} />
+      <Button title="Register" onPress={handleRegister} />
 
       <Text style={styles.linkText}>
-        Don't have an account?{" "}
+        Already have an account?{" "}
         <Text
           style={styles.link}
-          onPress={() => navigation.navigate("Register")}
+          onPress={() => navigation.navigate("Login")}
         >
-          Register
+          Login
         </Text>
       </Text>
     </View>

@@ -39,7 +39,7 @@ const Favorites = () => {
 
 const grid = {
   display: "grid",
-  gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
+  gridTemplateColumns: "repeat(auto-fill, minmax(250px, 1fr))",
   gap: "20px",
 };
 

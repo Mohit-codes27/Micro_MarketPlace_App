@@ -32,20 +32,22 @@ const Login = () => {
       }}
     >
       <h2>Login</h2>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} style={{ display: "flex", flexDirection: "column", gap: "15px" }}>
         <input
           type="email"
           placeholder="Email"
           required
+          style={{ padding: "10px", border: "1px solid #ddd", borderRadius: "8px", fontSize: "14px" }}
           onChange={(e) => setForm({ ...form, email: e.target.value })}
         />
         <input
           type="password"
           placeholder="Password"
           required
+          style={{ padding: "10px", border: "1px solid #ddd", borderRadius: "8px", fontSize: "14px" }}
           onChange={(e) => setForm({ ...form, password: e.target.value })}
         />
-        <button type="submit">Login</button>
+        <button type="submit" style={{ padding: "10px 20px", background: "#007bff", color: "#fff", border: "none", borderRadius: "8px", cursor: "pointer", fontSize: "16px", marginTop: "10px" }}>Login</button>
       </form>
     </div>
   );
